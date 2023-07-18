@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug BezelWebsite",
+            "program": "${workspaceFolder:getbezel.app-website}/.build/debug/BezelWebsite",
+            "args": [],
+            "cwd": "${workspaceFolder:getbezel.app-website}",
+            "preLaunchTask": "swift: Build Debug BezelWebsite"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release BezelWebsite",
+            "program": "${workspaceFolder:getbezel.app-website}/.build/release/BezelWebsite",
+            "args": [],
+            "cwd": "${workspaceFolder:getbezel.app-website}",
+            "preLaunchTask": "swift: Build Release BezelWebsite"
+        }
+    ]
+}
