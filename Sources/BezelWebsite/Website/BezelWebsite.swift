@@ -17,8 +17,8 @@ struct BezelWebsite: Website {
         let tags: [String]
     }
 
-    let name = "Bezel • Mirror your iPhone"
-    let description = "Bezel is a free app that lets you mirror your iPhone to your Mac by just plugging it in."
+    let name = "Bezel • Show your iPhone on your Mac"
+    let description = "Bezel mirrors your iPhone onto your Mac by just plugging it in. Beautifully designed for Mac, with ease of use in mind."
     let language = Language.english
     let imagePath: Publish.Path? = "images/og-main.png"
     let url = URL(string: "https://getbezel.app")!
