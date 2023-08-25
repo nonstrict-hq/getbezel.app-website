@@ -24,7 +24,10 @@ extension Theme where Site == BezelWebsite {
             return HTML(
                 .head(for: indexWithImage, on: context.site),
                 .body(
-                    .component(HeroAlt())
+                    .attribute(named: "class", value: "bg-gray-900"),
+                    .component(Header()),
+                    .component(HeroAlt()),
+                    .component(Footer())
                 )
             )
         }
@@ -38,7 +41,17 @@ extension Theme where Site == BezelWebsite {
         }
         
         func makePageHTML(for page: Publish.Page, context: Publish.PublishingContext<BezelWebsite>) throws -> Plot.HTML {
-            HTML(.body(.text("TODO")))
+            var pageWithImage = page
+            pageWithImage.imagePath = context.site.imagePath
+            return HTML(
+                .head(for: pageWithImage, on: context.site),
+                .body(
+                    .attribute(named: "class", value: "bg-gray-900"),
+                    .component(Header()),
+                    .component(Pricing()),
+                    .component(Footer())
+                )
+            )
         }
         
         func makeTagListHTML(for page: Publish.TagListPage, context: Publish.PublishingContext<BezelWebsite>) throws -> Plot.HTML? {
