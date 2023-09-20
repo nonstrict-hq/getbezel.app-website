@@ -1,3 +1,3 @@
 ---
-Title: Thank you for subscribing
+title: Thank you for subscribing
 ---
