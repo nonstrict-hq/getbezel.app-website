@@ -24,9 +24,10 @@ extension Theme where Site == BezelWebsite {
             return HTML(
                 .head(for: indexWithImage, on: context.site),
                 .body(
-                    .attribute(named: "class", value: "bg-gray-900"),
+                    .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                     .component(Header()),
                     .component(HeroAlt()),
+                    .component(Features()),
 //                    .component(Testimonials()),
                     .component(Footer())
                 )
@@ -50,7 +51,7 @@ extension Theme where Site == BezelWebsite {
                 return HTML(
                     .head(for: pageWithImage, on: context.site),
                     .body(
-                        .attribute(named: "class", value: "bg-gray-900"),
+                        .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                         .component(Header()),
                         .component(Pricing()),
                         .component(Footer())
@@ -60,7 +61,7 @@ extension Theme where Site == BezelWebsite {
                 return HTML(
                     .head(for: pageWithImage, on: context.site),
                     .body(
-                        .attribute(named: "class", value: "bg-gray-900"),
+                        .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                         .component(Header()),
                         .component(ThankYouTrying()),
                         .component(Footer())
@@ -70,7 +71,7 @@ extension Theme where Site == BezelWebsite {
                 return HTML(
                     .head(for: pageWithImage, on: context.site),
                     .body(
-                        .attribute(named: "class", value: "bg-gray-900"),
+                        .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                         .component(Header()),
                         .component(Subscribed()),
                         .component(Footer())
