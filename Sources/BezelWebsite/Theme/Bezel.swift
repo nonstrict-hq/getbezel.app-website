@@ -27,7 +27,6 @@ extension Theme where Site == BezelWebsite {
                     .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                     .component(Header()),
                     .component(HeroAlt()),
-                    .component(Features()),
 //                    .component(Testimonials()),
                     .component(Footer())
                 )
