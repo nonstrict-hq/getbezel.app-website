@@ -79,8 +79,15 @@ extension Theme where Site == BezelWebsite {
                     )
                 )
             case "vision":
+                pageWithImage.title = ""
+                pageWithImage.imagePath = "images/vision/og-main.png"
+
+                var s = context.site
+                s.name = "Bezel • iPhone mirroring for Vision Pro"
+                s.description = "Bezel shows your iPhone inside Vision Pro."
+
                 return HTML(
-                    .head(for: pageWithImage, on: context.site),
+                    .head(for: pageWithImage, on: s, titleSeparator: ""),
                     .body(
                         .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
                         .component(VisionHeader()),
