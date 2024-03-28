@@ -95,6 +95,16 @@ extension Theme where Site == BezelWebsite {
                         .component(VisionFooter())
                     )
                 )
+            case "helper":
+                return HTML(
+                    .head(for: pageWithImage, on: context.site),
+                    .body(
+                        .attribute(named: "class", value: "bg-gray-100 dark:bg-gray-900"),
+                        .component(Header()),
+                        .component(Helper()),
+                        .component(Footer())
+                    )
+                )
             default:
                 return HTML(.body(.text("Not found: \(page.path)")))
             }
